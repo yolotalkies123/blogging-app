@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: bloggingapp
-          image: adijaiswal/bloggingapp:latest # Updated image to private DockerHub image
+          image: pathiyildevika422/blogging_app:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
       imagePullSecrets:
-        - name: dock-secret # Reference to the Docker registry secret
+        - name: docker-cred
 ---
 apiVersion: v1
 kind: Service
